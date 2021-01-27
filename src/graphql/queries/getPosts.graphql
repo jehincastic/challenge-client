@@ -1,0 +1,13 @@
+query GetPosts($limit: Int!, $page: Int!) {
+  getPosts(input: {
+    limit: $limit
+    page: $page
+  }) {
+    hasNext
+    posts{
+      ...PostResponse
+    }
+    error
+    count
+  }
+}

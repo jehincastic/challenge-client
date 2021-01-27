@@ -1,0 +1,13 @@
+mutation AddNewPost($picture: Upload, $content: String!){
+  addNewPost(
+    input: {
+      picture: $picture
+    	content: $content
+    }
+  ) {
+    post{
+      ...PostResponse
+    }
+    error
+  }
+}

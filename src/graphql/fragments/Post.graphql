@@ -1,0 +1,11 @@
+fragment PostResponse on Post {
+  id
+  content
+  imagePath
+  numberOfLikes
+  hasUserLiked
+  createdAt
+  creator{
+    name
+  }
+}
